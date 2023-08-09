@@ -1,0 +1,4 @@
+azure-storage-blob
+python-multipart
+uvicorn
+fastapi~=0.100.0

@@ -1,0 +1,12 @@
+---
+- name: Deploy App to Local Docker
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Build Docker Image
+      command: docker build -t myapp .
+      args:
+        chdir: ../
+
+    - name: Run Docker Container
+      command: docker run -d -p 4000:80 myapp
